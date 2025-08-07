@@ -65,6 +65,10 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
     return (
         <>
             <div id="page" className={`page_wapper hfeed site ${scroll ? "fixed-header floating-menu" : ""} ${isMobileMenu ? "crt_mobile_menu-visible" : ""}`}>
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+                />
                 <div id="wrapper_full" className="content_all_warpper">
                     {!headerStyle && <Header1 handleSearch={handleSearch} handleContactPopup={handleContactPopup} handleMobileMenu={handleMobileMenu} />}
                     {headerStyle == 1 ? <Header1 handleSearch={handleSearch} handleContactPopup={handleContactPopup} handleMobileMenu={handleMobileMenu} /> : null}
@@ -84,7 +88,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
                     {headerStyle == 15 ? <Header15 handleSearch={handleSearch} handleContactPopup={handleContactPopup} handleMobileMenu={handleMobileMenu} /> : null}
                     {headerStyle == 16 ? <Header16 handleSearch={handleSearch} handleContactPopup={handleContactPopup} handleMobileMenu={handleMobileMenu} /> : null}
 
-                    {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} blogMetaSingle={blogMetaSingle}/>}
+                    {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} blogMetaSingle={blogMetaSingle} />}
                     <div id="content" className="site-content">
                         {children}
                     </div>

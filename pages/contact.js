@@ -76,7 +76,7 @@ export default function Contact() {
                                             <div className="contnet">
                                                 <h3> Post Address </h3>
                                                 <p>
-                                                    280 Granite Run Drive Suite #200 Lancaster, PA 1760
+                                                    #602, Challa Mall, Sir Thygaraya Road, T.nagar,chennai 600017, Tamil Nadu.
                                                 </p>
                                             </div>
                                         </div>
@@ -92,7 +92,14 @@ export default function Contact() {
                                             <div className="contnet">
                                                 <h3> General Enquires </h3>
                                                 <p>
-                                                    Phone: +98 060 712 34 &amp; Email: sendmail@qetus.com
+                                                    <b>Email:</b> customercare@j2wealth.co.in<br />
+                                                    digital@j2wealth.co.in         <br />
+
+                                                    <b>Customer Care Number:</b> - 9500002366<br />
+
+                                                    <b>Dealer’s Desk:</b> - 9150033051 | 9150033049<br />
+
+                                                    <b>Tax Advisor Number:</b> - 9150033053<br />
                                                 </p>
                                             </div>
                                         </div>
