@@ -15,6 +15,7 @@ import "../public/assets/css/style.css"
 import "../public/assets/css/woocommerce-layout.css"
 import "../public/assets/css/woocommerce.css"
 import "../public/assets/css/style.css"
+import WhatsAppButton from "@/components/sections/WhatsAppButton"
 
 
 function MyApp({ Component, pageProps }) {
@@ -30,7 +31,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <title>Creote - Corporate & Consulting Business NextJS Template</title>
             {!loading ? (
-                <Component {...pageProps} />
+                <><Component {...pageProps} /></>
             ) : (
                 <Preloader />
             )}
