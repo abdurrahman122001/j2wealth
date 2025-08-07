@@ -42,7 +42,7 @@ export default function HeroSlider1() {
                                     <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                         <div className="slider_content pd_top_180 pd_bottom_200">
                                             <h6 className="animate_up d-inline-block"> Our Vision to Grow Better </h6>
-                                            <h1 className="animate_left"> Inspired <br /> Performance </h1>
+                                            <h1 className="animate_left"> Secure Your Future <br /> with SIP Investments </h1>
                                             <p className="description animate_right"> Duty obligations of business it
                                                 will
                                                 frequently occur that pleasures <br /> have to be repudiated and
@@ -67,7 +67,8 @@ export default function HeroSlider1() {
                                     <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                         <div className="slider_content pd_top_180 pd_bottom_200">
                                             <h6 className="animate_up d-inline-block"> Hire the Best </h6>
-                                            <h1 className="animate_left"> Hire Better, <br /> Faster! </h1>
+                                            <h1 className="animate_left">
+                                                Maximize Your Wealth with <br/> Smart Investment Strategies </h1>
                                             <p className="description animate_right"> On the other hand, we denounce
                                                 with
                                                 righteous indignation and <br /> dislike men who are so beguiled. </p>
@@ -90,7 +91,7 @@ export default function HeroSlider1() {
                                     <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                         <div className="slider_content pd_top_180 pd_bottom_200">
                                             <h6 className="animate_up d-inline-block"> Our Vision to Grow Better </h6>
-                                            <h1 className="animate_left"> Countless <br /> Happy Clients </h1>
+                                            <h1 className="animate_left"> Start a New Chapter with a <br/>  Happy Family and Financial Security </h1>
                                             <p className="description animate_right"> These cases are perfectly simple
                                                 and easy
                                                 to distinguish. In a free <br /> hour, when our power of choice is
