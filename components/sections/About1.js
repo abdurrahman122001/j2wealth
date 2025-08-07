@@ -83,21 +83,6 @@ export default function About1() {
                                 <div className="move_image_absolute">
                                     <img src="/assets/images/about/about-1-1.png" className="class-fluid" alt="image" />
                                 </div>
-                                <div className="row">
-                                    <div className="col-lg-6 col-md-6">
-                                        <div className="service_box style_one dark_color">
-                                            <div className="service_content">
-                                                <div className="image ">
-                                                    <img src="/assets/images/service-illu-1.png" className="img-fluid" alt="Service Image" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6">
-                                        {/*===============spacing==============*/}
-            
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
