@@ -25,8 +25,9 @@ export default function Home1() {
             </Head>
             <Layout headerStyle={1} footerStyle={1}>
                 <HeroSlider1 />
-                <About1 />
                 <Service1 />
+                <About1 />
+
                 <Expertise />
                 <Process1 />
                 <Team1 />
