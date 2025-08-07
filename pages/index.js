@@ -12,7 +12,7 @@ import Team1 from "@/components/sections/Team1"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import { useState } from "react"
 import Head from 'next/head'
-
+import { PartnerLogoSlider } from "@/components/sections/TeamSlider"
 export default function Home1() {
     // Floating
     const [isFloating, setFloating] = useState(false);
@@ -29,9 +29,10 @@ export default function Home1() {
                 <About1 />
 
                 <Expertise />
-                <Process1 />
+                {/* <Process1 /> */}
                 <Team1 />
-                <Project1 />
+                <PartnerLogoSlider/>
+                {/* <Project1 /> */}
                 <Testimonial1 />
                 <Blog1 />
                 <Newsteller1 />

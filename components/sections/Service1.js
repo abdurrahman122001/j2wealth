@@ -59,7 +59,6 @@ export default function Service1() {
 
             <section className="project-section bg_light_1" id="service">
                 <div className="pd_top_80" />
-
                 <div className="medium-container">
                     <div className="row">
                         <div className="title_all_box style_one text-center dark_color">
