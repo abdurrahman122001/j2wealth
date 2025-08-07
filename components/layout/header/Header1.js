@@ -87,7 +87,7 @@ export default function Header1({ handleSearch, handleContactPopup, handleMobile
                                     <div className="header_right_content">
                                         <ul>
                                             <li className="header-button">
-                                                <Link href="#" className="theme-btn one">Get In Touch</Link>
+                                                <Link href="#" className="theme-btn one">Login</Link>
                                             </li>
                                         </ul>
                                     </div>
