@@ -7,7 +7,10 @@ const PageHead = ({ headTitle }) => {
                 <title>
                     {headTitle ? headTitle : "Creote - Just another Nextjs Template"}
                 </title>
+                <link rel="icon" href="/favicon.ico" />
             </Head>
         </>
     )
-}export default PageHead
+}
+
+export default PageHead
