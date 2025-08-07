@@ -30,15 +30,9 @@ export default function Header1({ handleSearch, handleContactPopup, handleMobile
                                     </div>
                                     <div className="header_right_content">
                                         <ul>
-                                            <li>
-                                                <button type="button" className="search-toggler" onClick={handleSearch}><i className="icon-search" /></button>
-                                            </li>
                                             <li className="header-button">
-                                                <Link href="#" className="theme-btn one"> Get In Touch
+                                                <Link href="#" className="theme-btn one"> Login
                                                 </Link>
-                                            </li>
-                                            <li>
-                                                <button type="button" onClick={handleContactPopup} className="contact-toggler"><i className="icon-bar" /></button>
                                             </li>
                                         </ul>
                                     </div>
