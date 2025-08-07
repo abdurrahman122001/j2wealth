@@ -5,59 +5,6 @@ export default function Header1({ handleSearch, handleContactPopup, handleMobile
     return (
         <>
             <div className="header_area" id="header_contents">
-                <div className="top_bar style_one">
-                    <div className="auto-container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-12">
-                                <div className="top_inner">
-                                    <div className="left_side common_css">
-                                        <div className="contntent address">
-                                            <i className="icon-placeholder" />
-                                            <div className="text">
-                                                <small>Location</small>
-                                                <span>61W Business Str Hobert, LA </span>
-                                            </div>
-                                        </div>
-                                        <div className="contntent email">
-                                            <i className="icon-email" />
-                                            <div className="text">
-                                                <small>Email</small>
-                                                <Link href="mailto:sendmail@creote.com">sendmail@creote.com</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="right_side common_css">
-                                        <div className="contntent phone">
-                                            <i className="icon-phone-call" />
-                                            <div className="text">
-                                                <small>Phone</small>
-                                                <Link href="tel:+9806071234">+9806071234</Link>
-                                            </div>
-                                        </div>
-                                        <div className="contntent media">
-                                            <i className="icon-share" />
-                                            <div className="text">
-                                                <small>Share</small>
-                                                <Link href="#" >
-                                                    <small>Fb</small>
-                                                </Link>
-                                                <Link href="#" >
-                                                    <small>Tw</small>
-                                                </Link>
-                                                <Link href="#" >
-                                                    <small>Sk</small>
-                                                </Link>
-                                                <Link href="#" >
-                                                    <small>Te</small>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <header className="header header_default style_one get_sticky_header">
                     <div className="auto-container">
                         <div className="row align-items-center">
