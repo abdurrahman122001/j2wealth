@@ -63,58 +63,58 @@ export default function MobileMenu({ handleMobileMenu }) {
                   style={{ display: isActive.key === 1 ? "block" : "none" }}
                 >
                   <li className="menu-item nav-item">
-                    <Link href="/about-us" className="dropdown-item nav-link">
+                    <Link href="/mutual-funds" className="dropdown-item nav-link">
                       <span>Mutual Funds</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/service-default" className="dropdown-item nav-link">
+                    <Link href="/stock-broking" className="dropdown-item nav-link">
                       <span>Stock Broking</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/pricing-packages" className="dropdown-item nav-link">
+                    <Link href="/portfolio-management" className="dropdown-item nav-link">
                       <span>Portfolio Management Services</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/our-team" className="dropdown-item nav-link">
+                    <Link href="/alternative-funds" className="dropdown-item nav-link">
                       <span>Alternative Investment Funds</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/life-insurance" className="dropdown-item nav-link">
                       <span>Life Insurance</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/guaranteed-returns" className="dropdown-item nav-link">
                       <span>Guaranteed Return Plan</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/savings-plan" className="dropdown-item nav-link">
                       <span>Savings Plan</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/general-insurance" className="dropdown-item nav-link">
                       <span>General Insurance</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/bonds" className="dropdown-item nav-link">
                       <span>Bonds</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/fixed-deposits" className="dropdown-item nav-link">
                       <span>Fixed Deposits</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
-                      <span>Tax Plannings</span>
+                    <Link href="/tax-planning" className="dropdown-item nav-link">
+                      <span>Tax Planning</span>
                     </Link>
                   </li>
                 </ul>
@@ -135,32 +135,32 @@ export default function MobileMenu({ handleMobileMenu }) {
                   style={{ display: isActive.key === 2 ? "block" : "none" }}
                 >
                   <li className="menu-item nav-item">
-                    <Link href="/about-us" className="dropdown-item nav-link">
+                    <Link href="/financial-calculators" className="dropdown-item nav-link">
                       <span>Financial Calculators</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/service-default" className="dropdown-item nav-link">
+                    <Link href="/download-forms" className="dropdown-item nav-link">
                       <span>Download Forms</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/pricing-packages" className="dropdown-item nav-link">
+                    <Link href="/pay-premium" className="dropdown-item nav-link">
                       <span>Pay Premium Online</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/our-team" className="dropdown-item nav-link">
+                    <Link href="/financial-fitness" className="dropdown-item nav-link">
                       <span>Financial Fitness</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/risk-profile" className="dropdown-item nav-link">
                       <span>Risk Profile</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/faqs" className="dropdown-item nav-link">
+                    <Link href="/tax-calculator" className="dropdown-item nav-link">
                       <span>Tax Calculator</span>
                     </Link>
                   </li>
@@ -176,7 +176,7 @@ export default function MobileMenu({ handleMobileMenu }) {
               
               {/* BLOGS */}
               <li className="menu-item nav-item">
-                <Link href="/blog-modern" className="nav-link">
+                <Link href="/blogs" className="nav-link">
                   <span>Blogs</span>
                 </Link>
               </li>
@@ -196,12 +196,12 @@ export default function MobileMenu({ handleMobileMenu }) {
                   style={{ display: isActive.key === 3 ? "block" : "none" }}
                 >
                   <li className="menu-item nav-item">
-                    <Link href="/about-us" className="dropdown-item nav-link">
+                    <Link href="/open-mf-account" className="dropdown-item nav-link">
                       <span>Open Account - MF</span>
                     </Link>
                   </li>
                   <li className="menu-item nav-item">
-                    <Link href="/service-default" className="dropdown-item nav-link">
+                    <Link href="/open-demat-account" className="dropdown-item nav-link">
                       <span>Open Account - Demat</span>
                     </Link>
                   </li>
@@ -211,6 +211,82 @@ export default function MobileMenu({ handleMobileMenu }) {
           </div>
         </nav>
       </div>
+
+      <style jsx global>{`
+        /* Mobile Menu - Force all links to be black */
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .nav-link,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .nav-link span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.nav-link,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.nav-link span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-item,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-item span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-item,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-item span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-toggle,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-toggle span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-toggle,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-toggle span,
+        .crt_mobile_menu .navbar_nav .nav-link,
+        .crt_mobile_menu .navbar_nav .nav-link span,
+        .crt_mobile_menu .navbar_nav a.nav-link,
+        .crt_mobile_menu .navbar_nav a.nav-link span,
+        .crt_mobile_menu .navbar_nav .dropdown-item,
+        .crt_mobile_menu .navbar_nav .dropdown-item span,
+        .crt_mobile_menu .navbar_nav a.dropdown-item,
+        .crt_mobile_menu .navbar_nav a.dropdown-item span,
+        .crt_mobile_menu .navbar_nav .dropdown-toggle,
+        .crt_mobile_menu .navbar_nav .dropdown-toggle span,
+        .crt_mobile_menu .navbar_nav a.dropdown-toggle,
+        .crt_mobile_menu .navbar_nav a.dropdown-toggle span {
+          color: #0c151a !important;
+        }
+
+        /* Mobile Menu hover states */
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .nav-link:hover,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .nav-link:hover span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.nav-link:hover,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.nav-link:hover span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-item:hover,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-item:hover span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-item:hover,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-item:hover span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-toggle:hover,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li .dropdown-toggle:hover span,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-toggle:hover,
+        .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.dropdown-toggle:hover span,
+        .crt_mobile_menu .navbar_nav .nav-link:hover,
+        .crt_mobile_menu .navbar_nav .nav-link:hover span,
+        .crt_mobile_menu .navbar_nav a.nav-link:hover,
+        .crt_mobile_menu .navbar_nav a.nav-link:hover span,
+        .crt_mobile_menu .navbar_nav .dropdown-item:hover,
+        .crt_mobile_menu .navbar_nav .dropdown-item:hover span,
+        .crt_mobile_menu .navbar_nav a.dropdown-item:hover,
+        .crt_mobile_menu .navbar_nav a.dropdown-item:hover span,
+        .crt_mobile_menu .navbar_nav .dropdown-toggle:hover,
+        .crt_mobile_menu .navbar_nav .dropdown-toggle:hover span,
+        .crt_mobile_menu .navbar_nav a.dropdown-toggle:hover,
+        .crt_mobile_menu .navbar_nav a.dropdown-toggle:hover span {
+          color: #333 !important;
+        }
+
+        /* Mobile Menu dropdown arrows */
+        .crt_mobile_menu .dropdown-btn span,
+        .crt_mobile_menu .dropdown-btn .fa {
+          color: #0c151a !important;
+        }
+
+        /* Additional fallback selectors */
+        .crt_mobile_menu * {
+          color: #0c151a !important;
+        }
+        
+        /* Exception for search input and buttons */
+        .crt_mobile_menu .search,
+        .crt_mobile_menu .sch_btn,
+        .crt_mobile_menu .close-btn {
+          color: inherit !important;
+        }
+      `}</style>
     </>
   );
 }

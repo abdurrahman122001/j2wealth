@@ -6,29 +6,30 @@ export default function Navbar() {
   const router = useRouter();
   const [isSticky, setIsSticky] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 100);
     };
 
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 991);
     };
 
-    checkMobile(); // Initial check
+    checkMobile();
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', checkMobile);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
+
+  const toggleDropdown = (key) => {
+    setActiveDropdown(activeDropdown === key ? null : key);
+  };
 
   return (
     <>
@@ -44,15 +45,24 @@ export default function Navbar() {
             <span>About Us</span>
           </Link>
         </li>
-        
-        <li className="menu-item menu-item-has-children dropdown nav-item">
-          <Link href="#" className="nav-link">
-            <span>Our Offerings</span>
-            <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
-          <ul className="dropdown-menu">
+
+        <li className={`menu-item menu-item-has-children dropdown nav-item ${activeDropdown === 'offerings' ? 'active' : ''}`}>
+          {isMobile ? (
+            <div className="nav-link" onClick={() => toggleDropdown('offerings')}>
+              <span>Our Services</span>
+              <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          ) : (
+            <Link href="#" className="nav-link">
+              <span>Our Offerings</span>
+              <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          )}
+          <ul className="dropdown-menu" style={isMobile ? { display: activeDropdown === 'offerings' ? 'block' : 'none' } : {}}>
             <li className="menu-item nav-item">
               <Link href="/mutual-funds" className="dropdown-item">
                 <span>Mutual Funds</span>
@@ -110,15 +120,24 @@ export default function Navbar() {
             </li>
           </ul>
         </li>
-        
-        <li className="menu-item menu-item-has-children dropdown nav-item">
-          <Link href="#" className="nav-link">
-            <span>Tools & Calculator</span>
-            <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
-          <ul className="dropdown-menu">
+
+        <li className={`menu-item menu-item-has-children dropdown nav-item ${activeDropdown === 'tools' ? 'active' : ''}`}>
+          {isMobile ? (
+            <div className="nav-link" onClick={() => toggleDropdown('tools')}>
+              <span>Tools & Calculator</span>
+              <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          ) : (
+            <Link href="#" className="nav-link">
+              <span>Tools & Calculator</span>
+              <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          )}
+          <ul className="dropdown-menu" style={isMobile ? { display: activeDropdown === 'tools' ? 'block' : 'none' } : {}}>
             <li className="menu-item nav-item">
               <Link href="/financial-calculators" className="dropdown-item">
                 <span>Financial Calculators</span>
@@ -157,21 +176,30 @@ export default function Navbar() {
             <span>Contact</span>
           </Link>
         </li>
-        
+
         <li className="menu-item nav-item">
           <Link href="/blogs" className="nav-link">
             <span>Blogs</span>
           </Link>
         </li>
-        
-        <li className="menu-item menu-item-has-children dropdown nav-item">
-          <Link href="#" className="nav-link">
-            <span>Open A/C</span>
-            <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
-          <ul className="dropdown-menu">
+
+        <li className={`menu-item menu-item-has-children dropdown nav-item ${activeDropdown === 'account' ? 'active' : ''}`}>
+          {isMobile ? (
+            <div className="nav-link" onClick={() => toggleDropdown('account')}>
+              <span>Open A/C</span>
+              <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          ) : (
+            <Link href="#" className="nav-link">
+              <span>Open A/C</span>
+              <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          )}
+          <ul className="dropdown-menu" style={isMobile ? { display: activeDropdown === 'account' ? 'block' : 'none' } : {}}>
             <li className="menu-item nav-item">
               <Link href="/open-mf-account" className="dropdown-item">
                 <span>Open Account - MF</span>
@@ -187,150 +215,115 @@ export default function Navbar() {
       </ul>
 
       <style jsx global>{`
-        .navbar_nav {
-          display: flex;
-          align-items: center;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-        
-        .navbar_nav .nav-item {
-          position: relative;
-          padding: 0 15px;
-        }
-        
-        .navbar_nav .nav-link {
+        /* Desktop view - White links */
+        .navbar_nav .nav-link,
+        .navbar_nav .nav-link span,
+        .navbar_nav a.nav-link,
+        .navbar_nav a.nav-link span {
           color: #fff !important;
-          font-weight: 500;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          position: relative;
-          padding: 15px 0;
         }
-        
-        .navbar_nav .dropdown-icon {
-          transition: transform 0.3s ease;
+
+        .navbar_nav .nav-link:hover,
+        .navbar_nav .nav-link:hover span,
+        .navbar_nav a.nav-link:hover,
+        .navbar_nav a.nav-link:hover span {
+          color: #f0f0f0 !important;
         }
-        
-        .navbar_nav .nav-item:hover .dropdown-icon {
-          transform: rotate(180deg);
+
+        /* Desktop dropdown items - Black */
+        .navbar_nav .dropdown-menu .dropdown-item,
+        .navbar_nav .dropdown-menu .dropdown-item span,
+        .navbar_nav .dropdown-menu a.dropdown-item,
+        .navbar_nav .dropdown-menu a.dropdown-item span,
+        .navbar_nav .dropdown-menu li a,
+        .navbar_nav .dropdown-menu li a span {
+          color: #0c151a !important;
         }
-        
-        .navbar_nav .nav-link:hover {
-          color: var(--primary-color) !important;
-        }
-        
-        .navbar_nav .dropdown-menu {
-          position: absolute;
-          top: 100%;
-          left: 0;
-          min-width: 220px;
-          background: #fff;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.3s ease;
-          z-index: 999;
-          padding: 10px 0;
-          border-radius: 5px;
-        }
-        
-        .navbar_nav .dropdown-menu .dropdown-item {
-          color: #333 !important;
-          padding: 8px 20px;
-          white-space: nowrap;
-          display: block;
-          transition: all 0.3s ease;
-        }
-        
-        .navbar_nav .dropdown-menu .dropdown-item:hover {
-          color: var(--primary-color) !important;
-          background: #f8f8f8;
-        }
-        
-        .navbar_nav .nav-item:hover .dropdown-menu {
-          opacity: 1;
-          visibility: visible;
-        }
-        
-        /* Sticky header styles */
-        .navbar_nav.sticky-nav .nav-link {
+
+        .navbar_nav .dropdown-menu .dropdown-item:hover,
+        .navbar_nav .dropdown-menu .dropdown-item:hover span,
+        .navbar_nav .dropdown-menu a.dropdown-item:hover,
+        .navbar_nav .dropdown-menu a.dropdown-item:hover span,
+        .navbar_nav .dropdown-menu li a:hover,
+        .navbar_nav .dropdown-menu li a:hover span {
           color: #333 !important;
         }
-        
-        .navbar_nav.sticky-nav .nav-link:hover {
-          color: var(--primary-color) !important;
-        }
-        
-        .navbar_nav.sticky-nav .dropdown-icon path {
-          stroke: #333;
-        }
-        
-        /* Mobile view styles */
-        .navbar_nav.mobile-view {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 20px 0;
-          background: #fff;
-          width: 100%;
-        }
-        
-        .navbar_nav.mobile-view .nav-item {
-          padding: 0;
-          width: 100%;
-          border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .navbar_nav.mobile-view .nav-link {
-          color: #333 !important;
-          padding: 12px 20px;
-          justify-content: space-between;
-          width: 100%;
-        }
-        
-        .navbar_nav.mobile-view .dropdown-menu {
-          position: static !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          display: none;
-          box-shadow: none;
-          padding-left: 20px !important;
-          background: #f9f9f9;
-          width: 100%;
-        }
-        
-        .navbar_nav.mobile-view .dropdown-menu .dropdown-item {
-          color: #333 !important;
-          padding: 10px 20px;
-          border-bottom: 1px solid #eee;
-        }
-        
-        .navbar_nav.mobile-view .nav-item.active .dropdown-menu {
-          display: block;
-        }
-        
-        .navbar_nav.mobile-view .dropdown-icon {
-          transform: rotate(0deg);
-        }
-        
-        .navbar_nav.mobile-view .nav-item.active .dropdown-icon {
-          transform: rotate(180deg);
-        }
-        
+
+        /* Mobile view - All links should be black */
         @media (max-width: 991px) {
-          .navbar_nav:not(.mobile-view) {
-            display: none;
+          .navbar_nav.mobile-view .nav-link,
+          .navbar_nav.mobile-view .nav-link span,
+          .navbar_nav.mobile-view a.nav-link,
+          .navbar_nav.mobile-view a.nav-link span,
+          .navbar_nav.mobile-view .dropdown-item,
+          .navbar_nav.mobile-view .dropdown-item span,
+          .navbar_nav.mobile-view a.dropdown-item,
+          .navbar_nav.mobile-view a.dropdown-item span,
+          .navbar_nav.mobile-view li a,
+          .navbar_nav.mobile-view li a span,
+          .navbar_nav.mobile-view .dropdown-menu .dropdown-item,
+          .navbar_nav.mobile-view .dropdown-menu .dropdown-item span,
+          .navbar_nav.mobile-view .dropdown-menu a.dropdown-item,
+          .navbar_nav.mobile-view .dropdown-menu a.dropdown-item span,
+          .navbar_nav.mobile-view .dropdown-menu li a,
+          .navbar_nav.mobile-view .dropdown-menu li a span,
+          .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.nav-link,
+          .crt_mobile_menu .menu-box .menu-outer ul.navbar_nav li a.nav-link span {
+            color: #0c151a !important;
+          }
+
+          .navbar_nav.mobile-view .nav-link:hover,
+          .navbar_nav.mobile-view .nav-link:hover span,
+          .navbar_nav.mobile-view a.nav-link:hover,
+          .navbar_nav.mobile-view a.nav-link:hover span,
+          .navbar_nav.mobile-view .dropdown-item:hover,
+          .navbar_nav.mobile-view .dropdown-item:hover span,
+          .navbar_nav.mobile-view a.dropdown-item:hover,
+          .navbar_nav.mobile-view a.dropdown-item:hover span,
+          .navbar_nav.mobile-view li a:hover,
+          .navbar_nav.mobile-view li a:hover span {
+            color: #333 !important;
           }
         }
-        
-        @media (min-width: 992px) {
-          .navbar_nav.mobile-view {
-            display: none;
+
+        /* Additional mobile breakpoint */
+        @media (max-width: 768px) {
+          .navbar_nav .nav-link,
+          .navbar_nav .nav-link span,
+          .navbar_nav a.nav-link,
+          .navbar_nav a.nav-link span,
+          .navbar_nav .dropdown-item,
+          .navbar_nav .dropdown-item span,
+          .navbar_nav a.dropdown-item,
+          .navbar_nav a.dropdown-item span,
+          .navbar_nav li a,
+          .navbar_nav li a span,
+          .navbar_nav .dropdown-menu .dropdown-item,
+          .navbar_nav .dropdown-menu .dropdown-item span,
+          .navbar_nav .dropdown-menu a.dropdown-item,
+          .navbar_nav .dropdown-menu a.dropdown-item span,
+          .navbar_nav .dropdown-menu li a,
+          .navbar_nav .dropdown-menu li a span {
+            color: #0c151a !important;
           }
+
+          .navbar_nav .nav-link:hover,
+          .navbar_nav .nav-link:hover span,
+          .navbar_nav a.nav-link:hover,
+          .navbar_nav a.nav-link:hover span,
+          .navbar_nav .dropdown-item:hover,
+          .navbar_nav .dropdown-item:hover span,
+          .navbar_nav a.dropdown-item:hover,
+          .navbar_nav a.dropdown-item:hover span,
+          .navbar_nav li a:hover,
+          .navbar_nav li a:hover span {
+            color: #333 !important;
+          }
+        }
+
+        /* SVG icons color inheritance */
+        .navbar_nav .dropdown-icon {
+          stroke: currentColor;
         }
       `}</style>
     </>
