@@ -25,7 +25,7 @@ export default function Home1() {
             <Head>
                 <title>Creote - Corporate & Consulting Business NextJS Template</title>
             </Head>
-            <Layout headerStyle={7} footerStyle={1}>
+            <Layout headerStyle={7} footerStyle={4}>
                 <HeroSlider1 />
                 <Process2 />
 
