@@ -8,10 +8,12 @@ import Newsteller1 from "@/components/sections/Newsteller1"
 import Process1 from "@/components/sections/Process1"
 import Project1 from "@/components/sections/Project1"
 import Service1 from "@/components/sections/Service1"
-import Team1 from "@/components/sections/Team1"
-import Testimonial1 from "@/components/sections/Testimonial1"
+import Process2 from "@/components/sections/Process2"
+import Team3 from "@/components/sections/Team3"
+import Testimonial4 from "@/components/sections/Testimonial4"
 import { useState } from "react"
 import Head from 'next/head'
+import Project3 from "@/components/sections/Project3"
 import { PartnerLogoSlider } from "@/components/sections/TeamSlider"
 export default function Home1() {
     // Floating
@@ -26,14 +28,15 @@ export default function Home1() {
             <Layout headerStyle={7} footerStyle={1}>
                 <HeroSlider1 />
                 <Service1 />
-                <About1 />
-
-                <Expertise />
+                <Process2 />
                 {/* <Process1 /> */}
-                <Team1 />
-                <PartnerLogoSlider/>
+                <Project3 />
+
+                <PartnerLogoSlider />
                 {/* <Project1 /> */}
-                <Testimonial1 />
+                <Testimonial4 />
+                <Team3 />
+
                 <Blog1 />
                 <Newsteller1 />
                 <FloatingMenu handleFloating={handleFloating} isFloating={isFloating} />

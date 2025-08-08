@@ -1,5 +1,6 @@
-import Link from "next/link"
-import VideoBox from "../elements/VideoBox"
+import Link from "next/link";
+import VideoBox from "../elements/VideoBox";
+
 export default function Process2() {
     return (
         <>
@@ -12,11 +13,11 @@ export default function Process2() {
                         <div className="col-lg-12">
                             <div className="title_all_box style_three text-center dark_color">
                                 <div className="title_sections three">
-                                    <div className="before_title">The Steps of</div>
-                                    <h2>Recruitment Process</h2>
+                                    <div className="before_title">Features</div>
+                                    <h2>Why Choose J2 Wealth</h2>
                                     <p>
-                                        Keep rising employee health care costs down. An employer's total benefit costs <br /> can be
-                                        as much as 40 percent of the company's operating budget.
+                                        Our approach to financial planning sets us apart from the competition <br /> 
+                                        and delivers real value to our clients.
                                     </p>
                                 </div>
                                 {/*===============spacing==============*/}
@@ -35,8 +36,8 @@ export default function Process2() {
                                         </div>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Identifiying the Needs</Link ></h2>
-                                        <p>Holds in these matters principles all selection right rejects.</p>
+                                        <h2><Link href="#" >Customer Centric</Link ></h2>
+                                        <p>We put our clients at the center of everything we do.</p>
                                     </div>
                                     <div className="number">
                                         <h6>01</h6>
@@ -59,20 +60,19 @@ export default function Process2() {
                                     </div>
                                     <div className="content_box">
                                         <h2> <Link href="#" >
-                                            Preparing Job Description </Link >
+                                            Goal Based Approach </Link >
                                         </h2>
-                                        <p> Our unique approach locates skill based industry professionals</p>
+                                        <p>We align our strategies with your specific financial objectives.</p>
                                     </div>
                                     <div className="number">
-                                        <h6> 02</h6>
+                                        <h6>02</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-12 col-sm-12 mb-sm-5 mb-md-5 mb-lg-0 mb-xl-0">
-                            <div className="image_boxes style_three  border_yes ">
-                                <img src="/assets/images/video-box-img-1.jpg" className="background_image" alt="image" />
-                                <div className="video_box">
+                            <div className="image_boxes style_three border_yes">
+<img src="/assets/images/video-box-img-1.jpg" className="background_image" alt="image" />                                <div className="video_box">
                                     <VideoBox />
                                 </div>
                             </div>
@@ -86,8 +86,8 @@ export default function Process2() {
                                         </div>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Find Talented Candidate</Link ></h2>
-                                        <p>Fault with man who choose enjoy a annoying consequences.</p>
+                                        <h2><Link href="#" >Holistic Philosophy</Link ></h2>
+                                        <p>We consider all aspects of your financial life in our planning.</p>
                                     </div>
                                     <div className="number">
                                         <h6>03</h6>
@@ -109,8 +109,8 @@ export default function Process2() {
                                         </div>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Screening &amp; Shortlisting</Link ></h2>
-                                        <p>Professional checks as well as a local records reference check</p>
+                                        <h2><Link href="#" >Personalised Planning</Link ></h2>
+                                        <p>We create customized solutions tailored to your unique needs.</p>
                                     </div>
                                     <div className="number">
                                         <h6>04</h6>
@@ -124,7 +124,6 @@ export default function Process2() {
                 <div className="pd_bottom_75" />
                 {/*===============spacing==============*/}
             </section>
-
         </>
     )
 }
