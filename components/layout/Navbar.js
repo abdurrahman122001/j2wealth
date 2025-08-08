@@ -386,6 +386,16 @@ export default function Navbar() {
             padding: 0;
           }
         }
+        .login-btn.sticky-login {
+          border-color: #111 !important;
+          color: #111 !important;
+          background: #fff !important;
+        }
+        .login-btn.sticky-login:hover {
+          background: #f6f6f6 !important;
+          color: #333 !important;
+          border-color: #333 !important;
+        }
       `}</style>
     </>
   );
