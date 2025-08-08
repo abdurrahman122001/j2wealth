@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Contact() {
     return (
         <>
-            <Layout breadcrumbTitle="Contact">
+            <Layout breadcrumbTitle="Contact" headerStyle={4} footerStyle={1}>
                 <div>
                     <section className="contact-section">
                         {/*===============spacing==============*/}

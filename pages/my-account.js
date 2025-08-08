@@ -22,7 +22,7 @@ export default function MyAccount() {
                                             <div className="simpleParallax"><img decoding="async" src="/assets/images/login-min.jpg" className="cover-parallax" alt="image" style={{ transform: 'translate3d(0px, 37px, 0px) scale(1.3)', willChange: 'transform', transition: 'transform 0.6s cubic-bezier(0, 0, 0, 1) 0s' }} /></div>
                                             <div className="login_left_side">
                                                 <div className="login_content_box">
-                                                    <Link href="/" className="login_logo"><img decoding="async" src="/assets/images/logo-white.png" className="login_logo" alt="image" /></Link>
+                                                    <Link href="/" className="login_logo"><img decoding="async" src="/assets/images/logo.png" className="login_logo" alt="image" style={{width: '80px', height: '130px'}}/></Link>
                                                     <div className="login_forms_box">
                                                         <h6>Start For Free</h6>
                                                         <h2>Create New Account</h2>
