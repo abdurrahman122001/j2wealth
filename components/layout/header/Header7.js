@@ -107,7 +107,7 @@ export default function Header7({ handleSearch, handleCart, handleMobileMenu }) 
                                 <div className="header_right_content">
                                     <ul>
                                         <li className="header-button">
-                                            <Link href="#" className="theme-btn one">Login</Link>
+                                            <Link href="/my-account" className="theme-btn one">Login</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -315,7 +315,7 @@ export default function Header7({ handleSearch, handleCart, handleMobileMenu }) 
                     }
                     
                     .logo_img {
-                        max-height: 35px;
+                        max-height: 85px;
                     }
                 }
             `}</style>
