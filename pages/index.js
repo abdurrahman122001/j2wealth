@@ -27,8 +27,9 @@ export default function Home1() {
             </Head>
             <Layout headerStyle={7} footerStyle={1}>
                 <HeroSlider1 />
-                <Service1 />
                 <Process2 />
+
+                <Service1 />
                 {/* <Process1 /> */}
                 <Project3 />
 
