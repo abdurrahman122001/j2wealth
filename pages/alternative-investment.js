@@ -11,7 +11,7 @@ export default function AlternativeInvestment() {
 
   return (
     <>
-      <Layout breadcrumbTitle="Alternative Investment Funds"  headerStyle={4} footerStyle={1}>
+      <Layout breadcrumbTitle="Alternative Investment Funds"  headerStyle={4} footerStyle={4}>
         <div className="auto-container">
           <div className="row default_row">
             <div id="primary" className="content-area service col-lg-8">

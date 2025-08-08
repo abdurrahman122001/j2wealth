@@ -22,7 +22,7 @@ export default function MutualFunds() {
     };
     return (
         <>
-            <Layout breadcrumbTitle="Mutual Funds" headerStyle={4} footerStyle={1}>
+            <Layout breadcrumbTitle="Mutual Funds" headerStyle={4} footerStyle={4}>
                 <div>
                     <div className="auto-container">
                         <div className="row default_row">

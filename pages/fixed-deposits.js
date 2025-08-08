@@ -11,7 +11,7 @@ export default function FixedDeposits() {
 
   return (
     <>
-      <Layout breadcrumbTitle="Fixed Deposits" headerStyle={4} footerStyle={1}>
+      <Layout breadcrumbTitle="Fixed Deposits" headerStyle={4} footerStyle={4}>
         <div className="auto-container">
           <div className="row default_row">
             <div id="primary" className="content-area service col-lg-8">

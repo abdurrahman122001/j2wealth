@@ -11,7 +11,7 @@ export default function StockBroking() {
 
   return (
     <>
-      <Layout breadcrumbTitle="Stock Broking" headerStyle={4} footerStyle={1}>
+      <Layout breadcrumbTitle="Stock Broking" headerStyle={4} footerStyle={4}>
         <div>
           <div className="auto-container">
             <div className="row default_row">

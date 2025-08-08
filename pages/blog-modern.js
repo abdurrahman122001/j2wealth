@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function BlogModern() {
     return (
         <>
-            <Layout breadcrumbTitle="Blog Modern" headerStyle={4} footerStyle={1}>
+            <Layout breadcrumbTitle="Blog Modern" headerStyle={4} footerStyle={4}>
                 <section className="blog_post_section two_column  style_three">
                     {/*===============spacing==============*/}
                     <div className="pd_top_90" />
