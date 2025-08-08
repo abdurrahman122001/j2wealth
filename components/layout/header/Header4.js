@@ -11,7 +11,7 @@ export default function Header4({ handleSearch, handleContactPopup, handleMobile
                                 <div className="col-xl-3 col-lg-2 col-md-12">
                                     <div className="logo mid_logo_icon">
                                         <Link href="/" className="logo_mid">
-                                            <img src="assets/images/logo-default.png" alt="Creote Elementor" className="logo_default" />
+                                        <img src="/assets/images/logo.png" alt="Creote Elementor" style={{width: '60px', height: '80px'}} className="logo_default"/>
                                         </Link>
                                     </div>
                                 </div>

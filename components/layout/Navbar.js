@@ -56,7 +56,7 @@ export default function Navbar() {
             </div>
           ) : (
             <Link href="#" className="nav-link">
-              <span>Our Offerings</span>
+              <span>Our Services</span>
               <svg className="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -79,7 +79,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="menu-item nav-item">
-              <Link href="/alternative-funds" className="dropdown-item">
+              <Link href="/alternative-investment" className="dropdown-item">
                 <span>Alternative Investment Funds</span>
               </Link>
             </li>
