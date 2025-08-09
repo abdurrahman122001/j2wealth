@@ -1,7 +1,7 @@
 import FloatingMenu from "@/components/layout/FloatingMenu"
 import Layout from "@/components/layout/Layout"
 import About1 from "@/components/sections/About1"
-import Blog1 from "@/components/sections/Blog1"
+import Blog4 from "@/components/sections/Blog4"
 import Expertise from "@/components/sections/Expertise"
 import HeroSlider1 from "@/components/sections/HeroSlider1"
 import Newsteller1 from "@/components/sections/Newsteller1"
@@ -12,6 +12,7 @@ import Process2 from "@/components/sections/Process2"
 import Team3 from "@/components/sections/Team3"
 import Testimonial4 from "@/components/sections/Testimonial4"
 import { useState } from "react"
+import About3 from "@/components/sections/About3"
 import Head from 'next/head'
 import Project3 from "@/components/sections/Project3"
 import { PartnerLogoSlider } from "@/components/sections/TeamSlider"
@@ -26,23 +27,17 @@ export default function Home1() {
             <Head>
                 <title>Creote - Corporate & Consulting Business NextJS Template</title>
             </Head>
-            <Layout headerStyle={7} footerStyle={4}>
+            <Layout headerStyle={4} footerStyle={4}>
                 <HeroSlider1 />
+                <About3 />
                 <Process2 />
-
                 <Service1 />
-                {/* <Process1 /> */}
                 <Project3 />
-
                 <PartnerLogoSlider />
-                <SIPCalculator/>
-                {/* <Project1 /> */}
+                <SIPCalculator />
                 <Testimonial4 />
                 <Team3 />
-
-                <Blog1 />
-                <Newsteller1 />
-                <FloatingMenu handleFloating={handleFloating} isFloating={isFloating} />
+                <Blog4 />
             </Layout>
         </>
     )

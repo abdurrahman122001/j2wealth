@@ -3,29 +3,20 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [isSticky, setIsSticky] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
-    const handleScroll = () => setIsSticky(window.scrollY > 100);
     const checkMobile = () => setIsMobile(window.innerWidth <= 991);
-
     checkMobile();
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", checkMobile);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", checkMobile);
-    };
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const toggleDropdown = (key) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
 
-  // The angle-down arrow icon, always consistent
   const DropdownArrow = () => (
     <svg
       className="dropdown-icon"
@@ -47,12 +38,7 @@ export default function Navbar() {
 
   return (
     <>
-      <ul
-        id="myNavbar"
-        className={`navbar_nav ${isSticky ? "sticky-nav" : ""} ${
-          isMobile ? "mobile-view" : ""
-        }`}
-      >
+      <ul id="myNavbar" className={`navbar_nav ${isMobile ? "mobile-view" : ""}`}>
         <li className="menu-item nav-item">
           <Link href="/" className="nav-link">
             <span>Home</span>
@@ -283,6 +269,7 @@ export default function Navbar() {
           gap: 8px;
           transition: color 0.25s;
         }
+        
         .navbar_nav .nav-link,
         .navbar_nav .nav-link span,
         .navbar_nav a.nav-link,
@@ -290,25 +277,14 @@ export default function Navbar() {
           color: #fff !important;
           transition: color 0.25s;
         }
+        
         .navbar_nav .nav-link:hover,
         .navbar_nav .nav-link:hover span,
         .navbar_nav a.nav-link:hover,
         .navbar_nav a.nav-link:hover span {
           color: #f0f0f0 !important;
         }
-        .navbar_nav.sticky-nav:not(.mobile-view) .nav-link,
-        .navbar_nav.sticky-nav:not(.mobile-view) .nav-link span,
-        .navbar_nav.sticky-nav:not(.mobile-view) a.nav-link,
-        .navbar_nav.sticky-nav:not(.mobile-view) a.nav-link span {
-          color: #0c151a !important;
-          transition: color 0.25s;
-        }
-        .navbar_nav.sticky-nav:not(.mobile-view) .nav-link:hover,
-        .navbar_nav.sticky-nav:not(.mobile-view) .nav-link:hover span,
-        .navbar_nav.sticky-nav:not(.mobile-view) a.nav-link:hover,
-        .navbar_nav.sticky-nav:not(.mobile-view) a.nav-link:hover span {
-          color: #333 !important;
-        }
+        
         .navbar_nav .dropdown-menu .dropdown-item,
         .navbar_nav .dropdown-menu .dropdown-item span,
         .navbar_nav .dropdown-menu a.dropdown-item,
@@ -317,6 +293,7 @@ export default function Navbar() {
         .navbar_nav .dropdown-menu li a span {
           color: #0c151a !important;
         }
+        
         .navbar_nav .dropdown-menu .dropdown-item:hover,
         .navbar_nav .dropdown-menu .dropdown-item:hover span,
         .navbar_nav .dropdown-menu a.dropdown-item:hover,
@@ -325,6 +302,7 @@ export default function Navbar() {
         .navbar_nav .dropdown-menu li a:hover span {
           color: #333 !important;
         }
+        
         @media (max-width: 991px) {
           .navbar_nav.mobile-view .nav-link,
           .navbar_nav.mobile-view .nav-link span,
@@ -352,6 +330,7 @@ export default function Navbar() {
             span {
             color: #0c151a !important;
           }
+          
           .navbar_nav.mobile-view .nav-link:hover,
           .navbar_nav.mobile-view .nav-link:hover span,
           .navbar_nav.mobile-view a.nav-link:hover,
@@ -365,36 +344,30 @@ export default function Navbar() {
             color: #333 !important;
           }
         }
+        
         .navbar_nav .dropdown-icon {
           stroke: currentColor;
         }
+        
         .navbar_nav .dropdown-menu .dropdown-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 32px;
           padding: 16px 24px;
         }
+        
         .navbar_nav .dropdown-menu .dropdown-col {
           list-style: none;
           padding: 0;
           margin: 0;
         }
+        
         @media (max-width: 991px) {
           .navbar_nav .dropdown-menu .dropdown-grid {
             grid-template-columns: 1fr;
             gap: 0;
             padding: 0;
           }
-        }
-        .login-btn.sticky-login {
-          border-color: #111 !important;
-          color: #111 !important;
-          background: #fff !important;
-        }
-        .login-btn.sticky-login:hover {
-          background: #f6f6f6 !important;
-          color: #333 !important;
-          border-color: #333 !important;
         }
       `}</style>
     </>
