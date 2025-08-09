@@ -15,6 +15,7 @@ import { useState } from "react"
 import Head from 'next/head'
 import Project3 from "@/components/sections/Project3"
 import { PartnerLogoSlider } from "@/components/sections/TeamSlider"
+import SIPCalculator from "@/components/sections/SIPCalculator"
 export default function Home1() {
     // Floating
     const [isFloating, setFloating] = useState(false);
@@ -34,6 +35,7 @@ export default function Home1() {
                 <Project3 />
 
                 <PartnerLogoSlider />
+                <SIPCalculator/>
                 {/* <Project1 /> */}
                 <Testimonial4 />
                 <Team3 />

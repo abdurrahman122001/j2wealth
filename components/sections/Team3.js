@@ -3,6 +3,8 @@ export default function Team3() {
     return (
         <>
             <section className="team-section">
+                <div className="pd_top_70" />
+
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
