@@ -1,12 +1,7 @@
 import FloatingMenu from "@/components/layout/FloatingMenu"
 import Layout from "@/components/layout/Layout"
-import About1 from "@/components/sections/About1"
 import Blog4 from "@/components/sections/Blog4"
-import Expertise from "@/components/sections/Expertise"
-import HeroSlider1 from "@/components/sections/HeroSlider1"
-import Newsteller1 from "@/components/sections/Newsteller1"
-import Process1 from "@/components/sections/Process1"
-import Project1 from "@/components/sections/Project1"
+import HeroSlider4 from "@/components/sections/HeroSlider4"
 import Service1 from "@/components/sections/Service1"
 import Process2 from "@/components/sections/Process2"
 import Team3 from "@/components/sections/Team3"
@@ -28,7 +23,7 @@ export default function Home1() {
                 <title>Creote - Corporate & Consulting Business NextJS Template</title>
             </Head>
             <Layout headerStyle={4} footerStyle={4}>
-                <HeroSlider1 />
+                <HeroSlider4 />
                 <About3 />
                 <Process2 />
                 <Service1 />
